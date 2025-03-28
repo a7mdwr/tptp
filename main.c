@@ -31,15 +31,15 @@ static int	parser(char **av)
 	return (1);
 }
 
-// static void lst_print(t_list *s)
-// {
-// 	t_list *tmp = s;
-// 	while (tmp)
-// 	{
-// 		printf("%d\n" , tmp->content);
-// 		tmp = tmp->next;
-// 	}
-// }
+static void lst_print(t_list *s)
+{
+	t_list *tmp = s;
+	while (tmp)
+	{
+		printf("%d\n" , tmp->content);
+		tmp = tmp->next;
+	}
+}
 
 int	main(int ac, char **av)
 {
@@ -58,6 +58,6 @@ int	main(int ac, char **av)
 		sort_five_numbers(&s);
 	if (ft_lstsize(s.stack_a) > 5)
 		sorting2(&s);
-	// lst_print(s.stack_a);
+	lst_print(s.stack_a);
 	free_list(s.stack_a);
 }

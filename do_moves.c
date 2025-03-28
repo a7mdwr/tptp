@@ -6,7 +6,7 @@
 /*   By: aradwan <aradwan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 15:06:47 by aradwan           #+#    #+#             */
-/*   Updated: 2025/03/28 15:16:25 by aradwan          ###   ########.fr       */
+/*   Updated: 2025/03/28 23:35:55 by aradwan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,35 +49,19 @@ void	sort_five_numbers(t_push *lst)
 	{
 		if (lst->stack_a->id == 0 || lst->stack_a->id == 1)
 			pb(lst);
-		else if (ft_lstlast(lst->stack_a)->id == 0 || ft_lstlast(lst->stack_a)->id == 1)
+		else if (ft_lstlast(lst->stack_a)->id == 0
+			|| ft_lstlast(lst->stack_a)->id == 1)
 			rra(lst);
 		else
 			ra(lst);
 	}
 	sort_three_numbers(lst);
-	if (lst->stack_b->id < lst->stack_b->next->id)
+	if ((lst->stack_b && lst->stack_b->next)
+		&& (lst->stack_b->id < lst->stack_b->next->id))
 		sb(lst);
 	pa(lst);
 	pa(lst);
 }
-
-// void	sorting2_helper(t_push *s, int i)
-// {
-// 	while (i)
-// 	{
-// 		if (s->stack_a->id % 2 == 1)
-// 		{
-// 			s->stack_a->id /= 2;
-// 			ra(s);
-// 		}
-// 		else if (s->stack_a->id % 2 == 0)
-// 		{
-// 			s->stack_a->id /= 2;
-// 			pb(s);
-// 		}
-// 		i--;
-// 	}
-// }
 
 void	sorting2(t_push *s)
 {
