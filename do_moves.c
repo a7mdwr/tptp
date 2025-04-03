@@ -49,18 +49,19 @@ void	sort_five_numbers(t_push *lst)
 	{
 		if (lst->stack_a->id == 0 || lst->stack_a->id == 1)
 			pb(lst);
-		else if (ft_lstlast(lst->stack_a)->id == 0
+		if (ft_lstlast(lst->stack_a)->id == 0
 			|| ft_lstlast(lst->stack_a)->id == 1)
 			rra(lst);
 		else
 			ra(lst);
 	}
+	lst_id(&lst->stack_a);
 	sort_three_numbers(lst);
-	if ((lst->stack_b && lst->stack_b->next)
-		&& (lst->stack_b->id < lst->stack_b->next->id))
-		sb(lst);
 	pa(lst);
 	pa(lst);
+	lst_id(&lst->stack_a);
+	if(sorted_check(lst->stack_a))
+		sa(lst);
 }
 
 void	sorting2(t_push *s)
