@@ -6,7 +6,7 @@
 /*   By: aradwan <aradwan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 15:06:47 by aradwan           #+#    #+#             */
-/*   Updated: 2025/03/28 23:35:55 by aradwan          ###   ########.fr       */
+/*   Updated: 2025/04/08 15:51:04 by aradwan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	sort_five_numbers(t_push *lst)
 	pa(lst);
 	pa(lst);
 	lst_id(&lst->stack_a);
-	if(sorted_check(lst->stack_a))
+	if (sorted_check(lst->stack_a))
 		sa(lst);
 }
 
